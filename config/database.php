@@ -6,6 +6,7 @@
 
 use kreait\Firebase\Factory;
 
-$factory = (new Factory)->withServiceAccount($_ENV['PATH_MYSPACE_JSON']);
+$factory = (new Factory)
+    ->withServiceAccount($_ENV['PATH_MYSPACE_JSON']);
 
 $database = $factory->createDatabase();
