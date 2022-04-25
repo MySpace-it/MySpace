@@ -18,7 +18,7 @@
     ],
     "require": {
         "vlucas/phpdotenv": "^5.4",
-        "kreait/firebase-php": "^6.2",
+        "kreait/firebase-php": "^6.3",
         "altorouter/altorouter": "^2.0"
     }
 }
