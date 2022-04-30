@@ -1,15 +1,23 @@
 <?php
 
-/**
- * Php file to get databse instance
- */
+require __DIR__.'/vendor/autoload.php';
 
-require '../vendor/autoload.php';
+use Kreait\Firebase\Factory;
 
-use kreait\Firebase\Factory;
+abstract class Database{
+    protected $database;
 
-$factory = (new Factory)
-    ->withServiceAccount($_ENV['PATH_MYSPACE_JSON'])
-    ->withDatabaseUri('https://myspace-5a8f6-default-rtdb.europe-west1.firebasedatabase.app');
+    public function __construct()
+    {
+        $this->connect();
+    }
 
-$database = $factory->createDatabase();
+    private function connect()
+    {
+        $factory = (new Factory())
+            ->withServiceAccount($_ENV['PATH_MYSPACE_JSON'])
+            ->withDatabaseUri('https://myspace-5a8f6-default-rtdb.europe-west1.firebasedatabase.app');
+
+        $this->database = $factory->createDatabase();
+    }
+}
