@@ -52,7 +52,6 @@ class Router
         $this->routes['POST'][] = $route;
     }
 
-
     /**
      * @throws RouterException
      */

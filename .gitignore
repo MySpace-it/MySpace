@@ -1,4 +1,4 @@
-./vendor/
+/vendor
 .idea
 .env
 myspace-5a8f6-firebase-adminsdk-t77xw-981a4fab82.json

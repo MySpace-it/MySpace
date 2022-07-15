@@ -6,13 +6,14 @@
      * specialement pour les etudiants d'esis test
      * 
      * @author Josh Muleshi <jmuleshi2@gmail.com>*/
+    require '../vendor/autoload.php';
 
     use Route\Router;
     use Route\RouterException;
 
-    require '../vendor/autoload.php';
-
     $router = new Router();
+
+    $router->show();
 
     $router->get('/', function (){ require '../views/home.php'; });
     $router->get('/posts', function (){ echo 'Les articles !'; });
